@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>반려독버섯을 키우세요</title>
+<style type="text/css">
+body, h1, h2, h3, p, ul, li, div {margin: 0; padding: 0;}
+h1{font-size: 5rem; line-height: 80px; color: white;}
+h2{font-size: 3.5rem; color: white;}
+h3{font-size: 2rem; padding: 50px 8px 0px 0px; font-style: italic; line-height: 2rem; color: white;}
+p{font-size: 1.5rem; padding-top: 20px; color: white;}
+ul{list-style-type: none; display: flex; justify-content: flex-end;}
+li a{display: block; text-align: center; width: 100px; color: white; text-decoration: none; padding: 20px 0px 0px 40px;}
+nav{margin-top: 0; padding-top: 0; background: linear-gradient(to bottom, black 40%, rgba(255, 255, 255, 0)); height: 50px; z-index: 10; position: fixed; width: 100vw; top: 0;}
+html{font-family: "Playfair Display", serif; font-optical-sizing: auto; font-weight: normal; font-style: normal; word-break: keep-all;} 
+head{position: absolute;}
+body{background: black;}
+.wrap{width: 980px; margin: auto;}
+.white{background: white; color: black;}
+.orng{background: linear-gradient(to bottom,#FF6315, #BF1200, black); height: 530px;}
+.thumb-vd{width: 100vw; height: 100vh;}
+.thumb-vd video{width: 100vw;}
+.grow{position: absolute; top:0; left: 0; padding: 60px 250px 0px 20px;}
+.container-right{display: flex; position: absolute; bottom: 0; right: 0; padding-right: 20px;}
+.main-f{font-family: "Parisienne", cursive; text-align: right; font-weight: 400; font-size: 300px; color: white; padding-bottom: 60px;}
+.inyourown{font-size: 80px; text-align: right; padding-bottom: 60px;}
+.logo{background: white; width: 120px; height: 120px; position: absolute; bottom: 20; left: calc(50% - 60px); border-radius: 100%}
+.pdtop{padding-top: 150px; text-align: center; font-style: normal;}
+.container-center{display: flex;flex-direction: row; justify-content: space-between; padding-top: 30px; padding-bottom: 30px; margin: auto;} 
+.item{height: 150px; width: 300px; position: relative;}
+.item img{z-index: -1; height: 150px; width: 300px; position: absolute; filter: brightness(60%);}
+.item p{z-index: 1; position: absolute; top: 0; left: 0; padding-left: 10px;}
+.warning-container{position: relative; height: 480px;}
+.warning-img{position: absolute; width: 980px; height: 500px; padding-top: 30px; text-align: center; left: calc(50% - 490px);}
+.warning-img img{width: 70%; height: auto;}
+.warning-text{position: absolute; z-index: 1; bottom: 5%; left: calc(50% - 290px);}
+.warning-text h3{font-style: normal; text-align: center; color: black;}
+.warning-text p{text-align: center; padding-top: 10px; color: black;}
+.nomal-container{display: flex; flex-direction: row;justify-content:flex-start; position: relative; height:480px; padding-bottom: 50px;}
+.nomal-item{display: flex; flex-direction: column;justify-content: space-between; position: absolute; right: 0}
+.normal-img{width: 500px; height: 100%; margin-right: auto;}
+.nomal-img img{width: 400px; height: auto;}
+.nomal-title h2, h3, p{text-align: right;}
+.nomal-sub{position: absolute; bottom: 0; padding-bottom: 30px;}
+.nomal-sub img{padding-top: 10px;}
+.mangtae{position: relative; height: 600px;}
+.mangtae-bg{position: absolute; width: 980px; height: 600px; align-items: center; left: calc(50% - 490px); top: calc(50% - 300px);}
+.mangtae-bg img{width: 980px; height: 600px;}
+.mangtae-content{position: absolute; left:calc(50% - 486px); transform: translate(0px, 170px);}
+.mangtae-content p, h2{text-align: center;}
+.black-text{color: black;}
+.mangtae-content h2{font-size: 7.3rem; color: black;}
+.cart{background: white; color: black; padding:3px 30px; width: 120px; text-align:center; margin-top: 30px;}
+.cart-black{background: black; color: white; padding:3px 30px; width: 120px; text-align:center; margin-top: 30px;}
+.yd{position: relative; align-items: center; height: 582.12px; width: 100%;}
+.yd-content{position: absolute; display: flex; flex-direction: row; justify-content:flex-start; z-index: 1; width: 980px; left:calc(50% - 490px);}
+.yd-content h3{padding-top: 30px;}
+.yd-gif{position: absolute; width: 980px; height: auto; align-items: center; left: calc(50% - 490px); padding-bottom: 50px;}
+.yd-gif img{width: 980px; height: 582.12px;}
+.youdon{margin-right: auto; text-align: left;}
+.youdon{text-align: right;}
+.iyr{width: 100vw; height: 200px; position: relative;}
+.iyr-content{z-index:1; position:absolute; right: 0; top: 40%}
+.iyr-content h3{padding-right: 70px;}
+.iyr-img{width: 100vw; top: 0; left: 0; position: absolute;}
+.iyr-img img{width: 100vw; height: auto;}
+.texture{position: relative; display: flex; flex-direction: column-reverse; justify-content: space-between; height: 500px; width: 980px;}
+.texture-main{position: absolute; top:30px; left: 0; text-align: left;}
+.texture-main h3{padding-top: 10px; text-align: left;}
+.texture-item{position: absolute; display: flex; flex-direction: row; justify-content: flex-end; width: 600px; top: 180px; left: 0;}
+.texture-item img{width: 170px}
+.texture-item p{text-align: left;}
+.texture-sub{position: absolute; top: 280px; left: 0;}
+.texture-sub h3{padding-top: 10px; text-align: left; transform: translate(430px);}
+.t-c{margin-right: 250px; background: white; color: black; padding:3px 30px; width: 120px; text-align:center;}
+.org{padding-left: 50px;}
+</style>
+</head>
+<body>
+<nav>
+	<ul>
+	  <li><a href="#normal">normal</a></li>
+	  <li><a href="#pattern">pattern</a></li>
+	  <li><a href="#texture">texture</a></li>
+	  <li><a href="#etc">etc</a></li>
+	</ul>
+</nav>
+<header>
+	<div class="thumb">
+		<div class="thumb-vd">
+			<video src="mainmush.mp4" type="video/mp4" autoplay muted loop></video>
+		</div>
+		<div class="thumb-content"></div>
+			<h1 class="grow">GROW YOUR PET POISONOUS MUSHROOM</h1>
+				<div class="container-right">
+			      <div class="tumb-text"><h1 class="main-f" link rel="preconnect" href="https://fonts.googleapis.com">
+						<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+						<link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">F</h1></div>
+				   <div><h1 class="indyourown">IND YOUR OWN</h1></div>
+			    </div>
+			    <div class="logo"></div>
+</header>
+<section>
+	<div class="wrap">
+	    <h3 class="pdtop">new arrivals for you</h3>
+		<div class="container-center">
+			 <div class="item">
+			 	<img src="aa.jpg">
+			 	<p>look dangerous but pure.</p>
+			 </div>
+			 <div class="item">
+			 	<img src="bb.jpg">
+			 	<p>for beginners.</p>
+			 </div>
+			 <div class="item">
+			 	<img src="cc.jpg">
+			   <p>really powerful things.</p>
+			 </div>
+		</div>
+   </div>
+</section>
+<section class="orng">
+	<div class="warning-container">
+		<div class="warning-img">
+		    <img src="mem-russula-227560_1280.jpg">
+	    </div>
+	    <div class="warning-text">
+		   	<h3 class="warning">warning</h3>
+		   	<p class="warning2">Most of the mushrooms we sell are poisonous.<br>So be sure to check the detailed description.<br>We sell poisonous mushrooms for growing.<br>We are absolutely not responsible for any side effects<br>caused by carelessness.</p>
+		</div>
+	</div>
+</section>
+<section id="normal">
+	<p class="pdtop">(normal)</p>
+	<div class="wrap">
+		<div class="nomal-container">
+			<div class="normal-img">
+				<img src="moodang.png">
+			</div>
+			<div class="normal-item">
+				    <div class="normal-title">
+						<h3>SO HOT, SO SPICY</h3>
+						<h2>Russula emetica</h2>
+						<p class="cart">add to cart</p>
+					</div>
+					<div class="nomal-sub">
+					    <h3 class="bottom">looks like mario</h3>
+					    <img class="mini" src="Russulamexicana.png" height="100vh">
+				    </div>
+			</div>
+		</div>
+    </div>
+</section>
+<section id="pattern">
+	<div class="wrap">
+	<div class="mangtae">
+		<div class="mangtae-bg">
+				 <img src="11223544014_009eec6321_b.jpg">
+		</div>
+		<div class="mangtae-content">
+				<p class="black-text">(pattern)</p>
+				<h2 class="mt-title"> Phallus indusiatus</h2>
+				<p class="cart-black">add to cart</p>
+		</div>
+	</div>
+</section>
+<section>
+	<div class="yd">
+		<div class="yd-content">
+		    <div class="youdon"><h3>YOU DON'T NEED</h3></div>
+			<div class="youdon2"><h3>ANY LACE PROPS</h3></div>
+		</div>
+		<div class="yd-gif">
+		    <img src="mangtae.gif">
+		</div>
+    </div>
+</section>
+<section>
+	<div class="iyr">
+        <div class="iyr-content">
+			<h3>In your room, mushroom</h3>
+		</div>
+		<div class="iyr-img">
+			<img src="iyr.jpg">
+		</div>
+   </div>
+</section>
+<section id="texture">
+	<div class="wrap">
+		<p class="pdtop">(texture)</p>
+		<div class="texture">
+			<div class="texture-sub">
+				<h3>jelly?</h3>
+				<h3 class="org">or glasses?</h3>
+			</div>
+			<div class="texture-item">
+				<div>
+					<p class="t-c">add to cart</p>
+				</div>
+				<div>
+					<img src="giphy.gif">
+				</div>
+			</div>
+			<div class="texture-main">
+				<h2>Gliophorus pssitachinus</h2>
+				<h3>covered with green mucus</h3>
+			</div>
+		</div>
+   </div>
+</section>
+<section>
+</section>
+</body>
+<footer></footer>
+</html>
